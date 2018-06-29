@@ -1,6 +1,6 @@
-package tests;
+package main.java.tests;
 
-import static utils.DataUtils.obterDataFormatada;
+import static main.java.utils.DataUtils.obterDataFormatada;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -11,16 +11,13 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import core.BaseTest;
-import core.Propriedades;
-import pages.MenuPage;
-import pages.MovimentacaoPage;
-import utils.DataUtils;
+import main.java.core.Propriedades;
+import main.java.utils.DataUtils;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class MovimentacaoTest extends BaseTest {
-	private MenuPage menuPage = new MenuPage();
-	private MovimentacaoPage movPage = new MovimentacaoPage();
+public class MovimentacaoTest extends main.java.core.BaseTest {
+	private main.java.pages.MenuPage menuPage = new main.java.pages.MenuPage();
+	private main.java.pages.MovimentacaoPage movPage = new main.java.pages.MovimentacaoPage();
 
 	@Test
 	public void test1InserirMovimentacao(){
@@ -31,7 +28,7 @@ public class MovimentacaoTest extends BaseTest {
 		movPage.setDescricao("Movimentação do Teste");
 		movPage.setInteressado("Interessado Qualquer");
 		movPage.setValor("500");
-		movPage.setConta(Propriedades.NOME_CONTA_ALTERADA);
+		movPage.setConta(main.java.core.Propriedades.NOME_CONTA_ALTERADA);
 		movPage.setStatusPago();
 		movPage.salvar();
 		

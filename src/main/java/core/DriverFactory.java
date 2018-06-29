@@ -1,4 +1,4 @@
-package core;
+package main.java.core;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;

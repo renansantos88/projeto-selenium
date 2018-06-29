@@ -1,7 +1,7 @@
-package core;
+package main.java.core;
 
-import static core.DriverFactory.getDriver;
-import static core.DriverFactory.killDriver;
+import static main.java.core.DriverFactory.getDriver;
+import static main.java.core.DriverFactory.killDriver;
 
 import java.io.File;
 import java.io.IOException;

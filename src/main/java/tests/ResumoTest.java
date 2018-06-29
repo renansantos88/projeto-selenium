@@ -1,6 +1,6 @@
-package tests;
+package main.java.tests;
 
-import static core.DriverFactory.getDriver;
+import static main.java.core.DriverFactory.getDriver;
 
 import java.util.List;
 
@@ -11,15 +11,12 @@ import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import core.BaseTest;
-import core.DriverFactory;
-import pages.MenuPage;
-import pages.ResumoPage;
+import main.java.core.DriverFactory;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class ResumoTest extends BaseTest {
-	private MenuPage menuPage = new MenuPage();
-	private ResumoPage resumoPage = new ResumoPage();
+public class ResumoTest extends main.java.core.BaseTest {
+	private main.java.pages.MenuPage menuPage = new main.java.pages.MenuPage();
+	private main.java.pages.ResumoPage resumoPage = new main.java.pages.ResumoPage();
 
 //	@Test
 	public void test1ExcluirMovimentacao(){

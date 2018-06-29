@@ -1,23 +1,18 @@
-package tests;
+package main.java.tests;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import core.BaseTest;
-import core.Propriedades;
-import pages.ContasPage;
-import pages.MenuPage;
-
-public class RemoverMovimentacaoContaTest extends BaseTest {
+public class RemoverMovimentacaoContaTest extends main.java.core.BaseTest {
 	
-	MenuPage menuPage = new MenuPage();
-	ContasPage contasPage = new ContasPage();
+	main.java.pages.MenuPage menuPage = new main.java.pages.MenuPage();
+	main.java.pages.ContasPage contasPage = new main.java.pages.ContasPage();
 
 	@Test
 	public void testExcluirContaComMovimentacao(){
 		menuPage.acessarTelaListarConta();
 		
-		contasPage.clicarExcluirConta(Propriedades.NOME_CONTA_ALTERADA);
+		contasPage.clicarExcluirConta(main.java.core.Propriedades.NOME_CONTA_ALTERADA);
 		
 		Assert.assertEquals("Conta em uso na movimentações", contasPage.obterMensagemErro());
 	}

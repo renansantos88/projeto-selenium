@@ -1,6 +1,6 @@
-package pages;
+package main.java.pages;
 
-import static core.DriverFactory.getDriver;
+import static main.java.core.DriverFactory.getDriver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import core.BasePage;
+import main.java.core.BasePage;
 
 public class MovimentacaoPage extends BasePage {
 

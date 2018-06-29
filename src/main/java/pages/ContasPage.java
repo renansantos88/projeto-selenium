@@ -1,10 +1,8 @@
-package pages;
+package main.java.pages;
 
 import org.openqa.selenium.By;
 
-import core.BasePage;
-
-public class ContasPage extends BasePage {
+public class ContasPage extends main.java.core.BasePage {
 
 	public void setNome(String nome) {
 		escrever("nome", nome);

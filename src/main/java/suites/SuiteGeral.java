@@ -1,4 +1,4 @@
-package suites;
+package main.java.suites;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -6,24 +6,16 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import core.DriverFactory;
-import pages.LoginPage;
-import tests.ContaTest;
-import tests.MovimentacaoTest;
-import tests.RemoverMovimentacaoContaTest;
-import tests.ResumoTest;
-import tests.SaldoTest;
-
 @RunWith(Suite.class)
 @SuiteClasses({
-	ContaTest.class,
-	MovimentacaoTest.class,
-	RemoverMovimentacaoContaTest.class,
-	SaldoTest.class,
-	ResumoTest.class
+	main.java.tests.ContaTest.class,
+	main.java.tests.MovimentacaoTest.class,
+	main.java.tests.RemoverMovimentacaoContaTest.class,
+	main.java.tests.SaldoTest.class,
+	main.java.tests.ResumoTest.class
 })
 public class SuiteGeral {
-	private static LoginPage page = new LoginPage();
+	private static main.java.pages.LoginPage page = new main.java.pages.LoginPage();
 	
 	@BeforeClass
 	public static void inicializa(){
@@ -36,6 +28,6 @@ public class SuiteGeral {
 	
 	@AfterClass
 	public static void finaliza(){
-		DriverFactory.killDriver();
+		main.java.core.DriverFactory.killDriver();
 	}
 }

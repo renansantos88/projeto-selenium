@@ -1,20 +1,15 @@
-package tests;
+package main.java.tests;
 
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import core.BaseTest;
-import core.Propriedades;
-import pages.ContasPage;
-import pages.MenuPage;
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class ContaTest extends BaseTest {
+public class ContaTest extends main.java.core.BaseTest {
 	
-	MenuPage menuPage = new MenuPage();
-	ContasPage contasPage = new ContasPage();
+	main.java.pages.MenuPage menuPage = new main.java.pages.MenuPage();
+	main.java.pages.ContasPage contasPage = new main.java.pages.ContasPage();
 	
 	@Test
 	public void test1_InserirConta(){
@@ -32,7 +27,7 @@ public class ContaTest extends BaseTest {
 		
 		contasPage.clicarAlterarConta("Conta do Teste");
 		
-		contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
+		contasPage.setNome(main.java.core.Propriedades.NOME_CONTA_ALTERADA);
 		contasPage.salvar();
 		
 		Assert.assertEquals("Conta alterada com sucesso!", contasPage.obterMensagemSucesso());
@@ -42,7 +37,7 @@ public class ContaTest extends BaseTest {
 	public void test3_InserirContaMesmoNome(){
 		menuPage.acessarTelaInserirConta();
 		
-		contasPage.setNome(Propriedades.NOME_CONTA_ALTERADA);
+		contasPage.setNome(main.java.core.Propriedades.NOME_CONTA_ALTERADA);
 		contasPage.salvar();
 		
 		Assert.assertEquals("Já existe uma conta com esse nome!", contasPage.obterMensagemErro());

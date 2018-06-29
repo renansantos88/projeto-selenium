@@ -1,7 +1,7 @@
-package pages;
+package main.java.pages;
 
-import core.BasePage;
-import core.DriverFactory;
+import main.java.core.BasePage;
+import main.java.core.DriverFactory;
 
 public class LoginPage extends BasePage {
 	

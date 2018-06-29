@@ -1,6 +1,6 @@
-package pages;
+package main.java.pages;
 
-import core.BasePage;
+import main.java.core.BasePage;
 
 public class HomePage extends BasePage {
 
